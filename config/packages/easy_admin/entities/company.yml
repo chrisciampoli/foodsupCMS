@@ -1,0 +1,51 @@
+# This file sets the configuration of the 'Product' entity.
+#
+# NOTE: this demo application splits the backend configuration into several
+# small files for educational purposes. In your application you can put the
+# entire backend configuration in just one file.
+#
+# The configuration options are explained in detail in the bundle documentation,
+# which is published at https://github.com/javiereguiluz/EasyAdminBundle
+easy_admin:
+    entities:
+        # the configuration of this entity is very verbose because it's used as
+        # an example to show all the configuration options available for entities
+        # check out the configuration of the other entities to see how concise
+        # can be the configuration of your backend
+        Company:
+            class: App\Entity\Company
+            label: 'Company'
+            list:
+                fields:
+                    - id
+                    - name
+                    - address
+                    - city
+                    - state
+                    - zip
+                    - phone
+                    - contact
+                    - email
+            show:
+                fields:
+                - id
+                    - name
+                    - address
+                    - city
+                    - state
+                    - zip
+                    - phone
+                    - contact
+                    - email
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
+                    - { property: 'name', css_class: 'large' }
+                    - { property: 'address', css_class: 'large' }
+                    - { property: 'city', css_class: 'large' }
+                    - { property: 'state', css_class: 'large' }
+                    - { property: 'zip', css_class: 'large' }
+                    - { property: 'phone', css_class: 'large' }
+                    - { property: 'contact', css_class: 'large' }
+                    - { property: 'email', css_class: 'large' }
+                    - { property: 'printerId', css_class: 'large' }

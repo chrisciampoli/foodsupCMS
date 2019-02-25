@@ -1,0 +1,73 @@
+{
+    "name": "javiereguiluz/easy-admin-demo",
+    "license": "MIT",
+    "type": "project",
+    "description": "A Symfony demo application to showcase the EasyAdmin bundle features.",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0"
+        },
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.0",
+        "ext-pdo_sqlite": "*",
+        "egeloen/ckeditor-bundle": "dev-master",
+        "javiereguiluz/easyadmin-bundle": "^1.17",
+        "sensio/framework-extra-bundle": "^5.0",
+        "symfony/asset": "^3.3",
+        "symfony/expression-language": "^3.3",
+        "symfony/flex": "^1.0",
+        "symfony/form": "^3.3",
+        "symfony/framework-bundle": "^3.3",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/orm-pack": "^1.0",
+        "symfony/polyfill-apcu": "^1.6",
+        "symfony/security-bundle": "^3.3",
+        "symfony/security-csrf": "^3.3",
+        "symfony/templating": "^3.3",
+        "symfony/translation": "^3.3",
+        "symfony/twig-bundle": "^3.3",
+        "symfony/validator": "^3.3",
+        "symfony/yaml": "^3.3",
+        "vich/uploader-bundle": "~1.4@dev",
+        "white-october/pagerfanta-bundle": "^1.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "symfony/browser-kit": "^3.3",
+        "symfony/debug-bundle": "^3.3",
+        "symfony/dotenv": "^3.3",
+        "symfony/phpunit-bridge": "^3.3",
+        "symfony/profiler-pack": "^1.0",
+        "symfony/var-dumper": "^3.3",
+        "symfony/web-server-bundle": "^3.3"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "make cache-warmup": "script",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "cache:clear": "symfony-cmd"
+        }
+    },
+    "conflict": {
+        "symfony/symfony": "*",
+        "symfony/twig-bundle": "<3.3",
+        "symfony/debug": "<3.3"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true
+        }
+    }
+}
