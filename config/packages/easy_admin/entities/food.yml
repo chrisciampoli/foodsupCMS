@@ -1,0 +1,68 @@
+# This file sets the configuration of the 'Product' entity.
+#
+# NOTE: this demo application splits the backend configuration into several
+# small files for educational purposes. In your application you can put the
+# entire backend configuration in just one file.
+#
+# The configuration options are explained in detail in the bundle documentation,
+# which is published at https://github.com/javiereguiluz/EasyAdminBundle
+easy_admin:
+    entities:
+        # the configuration of this entity is very verbose because it's used as
+        # an example to show all the configuration options available for entities
+        # check out the configuration of the other entities to see how concise
+        # can be the configuration of your backend
+        Food:
+            class: App\Entity\Food
+            label: 'Food'
+            list:
+                fields:
+                    - id
+                    - notes
+                    - companyId
+                    - name
+                    - type
+                    - description
+                    - genre
+                    - price
+                    - ingredients
+                    - imageName
+                    - entryDate
+                    - latitude
+                    - longitude
+                    - phone
+                    - printerId
+            show:
+                fields:
+                    - id
+                    - notes
+                    - companyId
+                    - name
+                    - type
+                    - description
+                    - genre
+                    - price
+                    - ingredients
+                    - imageName
+                    - entryDate
+                    - latitude
+                    - longitude
+                    - phone
+                    - printerId
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
+                    - { property: 'notes', css_class: 'large' }
+                    - { property: 'companyId', css_class: 'large' }
+                    - { property: 'name', css_class: 'large' }
+                    - { property: 'type', css_class: 'large' }
+                    - { property: 'description', css_class: 'large' }
+                    - { property: 'genre', css_class: 'large' }
+                    - { property: 'price', css_class: 'large' }
+                    - { property: 'ingredients', css_class: 'large' }
+                    - { property: 'imageName', css_class: 'large' }
+                    - { property: 'entryDate', css_class: 'large' }
+                    - { property: 'latitude', css_class: 'large' }
+                    - { property: 'longitude', css_class: 'large' }
+                    - { property: 'phone', css_class: 'large' }
+                    - { property: 'printerId', css_class: 'large' }
